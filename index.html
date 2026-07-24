@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saborear-T · Pide en línea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="header-row">
+    <button class="brand" id="brandBtn" aria-label="Saborear-T">
+      <span class="brand-mark">🍃</span>
+      <span class="brand-name">Saborear-T</span>
+    </button>
+    <button class="cart-btn" id="openCartBtn">
+      <span class="cart-btn-icon">🧾</span>
+      <span class="cart-btn-text">Mi pedido</span>
+      <span class="cart-btn-count" id="cartCount">0</span>
+    </button>
+  </div>
+  <nav class="cat-nav" id="catNav" aria-label="Categorías del menú"></nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <p class="hero-eyebrow">Cocinado al momento, especialmente para ti</p>
+  <h1 class="hero-title">Arma tu pedido<br>y mándalo directo a cocina</h1>
+  <p class="hero-sub">Elige tus platillos, personalízalos a tu gusto y envía el pedido por WhatsApp en un toque.</p>
+</section>
+
+<!-- ============ MAIN MENU ============ -->
+<main id="menuMain"></main>
+
+<footer class="site-footer">
+  <p>Saborear-T · Preguntas sobre tiempos de preparación, con gusto te ayudamos.</p>
+</footer>
+
+<!-- ============ CART DRAWER (ticket de cocina) ============ -->
+<div class="overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Tu pedido">
+  <div class="ticket">
+    <div class="ticket-head">
+      <div class="ticket-perf"></div>
+      <div class="ticket-title-row">
+        <h2>Tu pedido</h2>
+        <button class="ticket-close" id="closeCartBtn" aria-label="Cerrar">✕</button>
+      </div>
+      <p class="ticket-sub">Saborear-T · orden para cocina</p>
+    </div>
+
+    <div class="ticket-body" id="cartItemsWrap">
+      <!-- cart items injected here -->
+    </div>
+
+    <div class="ticket-form">
+      <label class="field">
+        <span>Tu nombre</span>
+        <input type="text" id="custName" placeholder="¿A nombre de quién?">
+      </label>
+
+      <div class="field">
+        <span>Entrega</span>
+        <div class="seg" id="deliverySeg">
+          <button type="button" class="seg-btn active" data-mode="recoger">Recoger en tienda</button>
+          <button type="button" class="seg-btn" data-mode="domicilio">A domicilio</button>
+        </div>
+      </div>
+
+      <label class="field" id="addressField" style="display:none;">
+        <span>Dirección de entrega</span>
+        <textarea id="custAddress" rows="2" placeholder="Calle, número, colonia, referencias"></textarea>
+      </label>
+
+      <label class="field">
+        <span>Notas para tu pedido (opcional)</span>
+        <textarea id="custNotes" rows="2" placeholder="Alguna indicación especial"></textarea>
+      </label>
+    </div>
+
+    <div class="ticket-total-row">
+      <span>Total</span>
+      <span class="ticket-total" id="cartTotal">$0</span>
+    </div>
+
+    <button class="send-btn" id="sendWhatsappBtn">
+      <span>Enviar pedido por WhatsApp</span>
+    </button>
+    <p class="ticket-empty-msg" id="cartEmptyMsg">Aún no agregas nada. Explora el menú y arma tu pedido 🍕</p>
+  </div>
+</aside>
+
+<!-- ============ BUILDER MODAL (pizza / ensalada) ============ -->
+<div class="overlay" id="modalOverlay"></div>
+<div class="modal" id="builderModal" role="dialog" aria-modal="true">
+  <div class="modal-inner" id="builderModalInner">
+    <!-- injected -->
+  </div>
+</div>
+
+<!-- ============ ITEM VARIANT MODAL (simple items) ============ -->
+<div class="modal" id="itemModal" role="dialog" aria-modal="true">
+  <div class="modal-inner" id="itemModalInner">
+    <!-- injected -->
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
