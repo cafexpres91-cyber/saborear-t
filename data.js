@@ -15,15 +15,15 @@ const MENU = {
     emoji: "🥟",
     intro: "Masa de pizza cerrada y horneada, rellena de nuestras especialidades. Porción personal, acompañada de papas o espagueti (blanco o rojo).",
     items: [
-      { id: "cal-hawaiano", name: "Hawaiano", desc: "Salsa de la casa, jamón y piña.", variants: [{ label: "Personal", price: 155 }] },
-      { id: "cal-elote", name: "Elote", desc: "Salsa de la casa, pollo a la plancha en cubos y elote.", variants: [{ label: "Personal", price: 155 }] },
-      { id: "cal-champi", name: "Champiñones", desc: "Salsa de la casa, pollo a la plancha en cubos y champiñones.", variants: [{ label: "Personal", price: 155 }] },
-      { id: "cal-poblano", name: "Poblano", desc: "Crema poblana con pollo a la plancha en cubos.", variants: [{ label: "Personal", price: 155 }] },
-      { id: "cal-chipotle", name: "Chipotle", desc: "Crema de chipotle con pollo a la plancha en cubos.", variants: [{ label: "Personal", price: 155 }] },
+      { id: "cal-hawaiano", name: "Calzone Hawaiano", desc: "Salsa de la casa, jamón y piña.", variants: [{ label: "Personal", price: 155 }] },
+      { id: "cal-elote", name: "Calzone Elote", desc: "Salsa de la casa, pollo a la plancha en cubos y elote.", variants: [{ label: "Personal", price: 155 }] },
+      { id: "cal-champi", name: "Calzone Champiñones", desc: "Salsa de la casa, pollo a la plancha en cubos y champiñones.", variants: [{ label: "Personal", price: 155 }] },
+      { id: "cal-poblano", name: "Calzone Poblano", desc: "Crema poblana con pollo a la plancha en cubos.", variants: [{ label: "Personal", price: 155 }] },
+      { id: "cal-chipotle", name: "Calzone Chipotle", desc: "Crema de chipotle con pollo a la plancha en cubos.", variants: [{ label: "Personal", price: 155 }] },
     ],
   },
 
- pastas: {
+  pastas: {
     label: "Pastas",
     emoji: "🍝",
     intro: "Acompañadas con queso parmesano. Elige preparación con o sin crema, y tu proteína.",
@@ -34,11 +34,9 @@ const MENU = {
       { id: "pas-casa", name: "Pastas salsa de la casa", desc: "Sin crema.", variants: [{ label: "Con proteína", price: 125 }, { label: "Sin proteína", price: 95 }, { label: "Porción personal", price: 50 }, { label: "Boneless", price: 160 }] },
       { id: "pas-mantequilla", name: "Pastas a la mantequilla", desc: "Sin crema.", variants: [{ label: "Con proteína", price: 125 }, { label: "Sin proteína", price: 95 }, { label: "Porción personal", price: 50 }, { label: "Boneless", price: 160 }] },
       { id: "pas-teriyaki", name: "Pastas Teriyaki", desc: "Con vegetales salteados.", variants: [{ label: "Único", price: 160 }] },
-
     ],
     proteinaOpciones: ["Salchicha Asadera", "Jamón", "Pollo", "Salchicha Pavo"],
   },
-
 
   hamburguesas: {
     label: "Hamburguesas",
@@ -117,10 +115,10 @@ const CATEGORY_META = {
 /* ---------- Armador de Pizza ---------- */
 const PIZZA_CONFIG = {
   sizes: [
-    { key: "chica", label: "Chica 25cm" },
-    { key: "mediana", label: "Mediana 35cm" },
-    { key: "grande", label: "Grande 40cm" },
-    { key: "mega", label: "Mega 45cm" },
+    { key: "chica", label: "Pizza Chica 25cm" },
+    { key: "mediana", label: "Pizza Mediana 35cm" },
+    { key: "grande", label: "Pizza Grande 40cm" },
+    { key: "mega", label: "Pizza Mega 45cm" },
   ],
   tradicional: {
     maxIngredientes: { chica: 2, mediana: 2, grande: 2, mega: 4 },
@@ -149,9 +147,9 @@ const PIZZA_CONFIG = {
 /* ---------- Armador de Ensalada ---------- */
 const SALAD_CONFIG = {
   sizes: [
-    { key: "chica", label: "Chica", price: 95, proteinas: 1, toppings: 2 },
-    { key: "mediana", label: "Mediana", price: 120, proteinas: 1, toppings: 3 },
-    { key: "grande", label: "Grande", price: 160, proteinas: 2, toppings: 4 },
+    { key: "chica", label: "Ensalada Chica", price: 95, proteinas: 1, toppings: 2 },
+    { key: "mediana", label: "Ensalada Mediana", price: 120, proteinas: 1, toppings: 3 },
+    { key: "grande", label: "Ensalada Grande", price: 160, proteinas: 2, toppings: 4 },
   ],
   bases: ["Base Lechuga", "Base Lechuga y Espinaca"],
   proteinas: ["Queso Panela", "Pollo", "Atún", "Manchego", "Jamón de Pavo", "Salchicha de Pavo", "Huevo Duro"],
