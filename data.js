@@ -147,9 +147,9 @@ const PIZZA_CONFIG = {
 /* ---------- Armador de Ensalada ---------- */
 const SALAD_CONFIG = {
   sizes: [
-    { key: "chica", label: "Ensalada Chica", price: 95, proteinas: 1, toppings: 2 },
-    { key: "mediana", label: "Ensalada Mediana", price: 120, proteinas: 1, toppings: 3 },
-    { key: "grande", label: "Ensalada Grande", price: 160, proteinas: 2, toppings: 4 },
+    { key: "chica", label: "Chica", price: 95, proteinas: 1, toppings: 2 },
+    { key: "mediana", label: "Mediana", price: 120, proteinas: 1, toppings: 3 },
+    { key: "grande", label: "Grande", price: 160, proteinas: 2, toppings: 4 },
   ],
   bases: ["Base Lechuga", "Base Lechuga y Espinaca"],
   proteinas: ["Queso Panela", "Pollo", "Atún", "Manchego", "Jamón de Pavo", "Salchicha de Pavo", "Huevo Duro"],
